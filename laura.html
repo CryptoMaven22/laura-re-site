@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Laura Operational Viewer | AtlasFlow</title>
+  <meta name="description" content="Modern Laura Operational Viewer for the AtlasFlow Laura Core Demo.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="laura-page">
+  <header class="site-header laura-glass-header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="AtlasFlow home"><img src="atlasflow-logo-full.png" alt="AtlasFlow logo"></a>
+      <nav class="nav-links" aria-label="Laura navigation">
+        <a href="index.html#work">Back to Work</a>
+        <a href="#viewer">Viewer</a>
+        <a href="#evidence">Evidence</a>
+        <a href="#workflow">Workflow</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="laura-hero">
+      <div class="container laura-hero-grid">
+        <div class="laura-hero-copy">
+          <div class="kicker coral-text">Laura Operational Viewer</div>
+          <h1>Lead replies become structured agent action.</h1>
+          <p>Laura captures a real estate lead reply, interprets intent and urgency, updates the lead record, alerts the assigned agent, and makes the next action visible.</p>
+          <div class="laura-hero-actions">
+            <a class="btn btn-primary" href="#viewer">Open the Viewer</a>
+            <a class="btn btn-secondary" href="#evidence">See the Proof Layer</a>
+          </div>
+          <div class="laura-mini-flow" aria-label="Laura workflow sequence">
+            <span>Reply</span><span>Match</span><span>AI</span><span>Notify</span><span>Dashboard</span>
+          </div>
+        </div>
+
+        <aside class="laura-command-card" aria-label="Laura command card">
+          <div class="command-topline"><img src="laura-logo-coral.png" alt="Laura logo"><span>Core Demo Live State</span></div>
+          <div class="command-status-row"><strong>agent_notified</strong><span>Final handoff complete</span></div>
+          <div class="command-grid">
+            <div><small>Priority</small><b>High</b></div>
+            <div><small>Record</small><b>Sanctus DB</b></div>
+            <div><small>Agent</small><b>Jeff Mathy</b></div>
+            <div><small>Lead</small><b>Jim Smith</b></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="laura-shell-section" id="viewer">
+      <div class="container">
+        <div class="laura-shell">
+          <aside class="laura-sidebar" aria-label="Lead list">
+            <div class="sidebar-title">
+              <span class="eyebrow">Lead Queue</span>
+              <h2>Active Replies</h2>
+            </div>
+
+            <button class="lead-tile active" data-lead="smith" type="button" aria-controls="leadDetail">
+              <span class="lead-avatar">JS</span>
+              <span><b>Jim Smith</b><small>Seller intent · High</small></span>
+              <em>Open</em>
+            </button>
+
+            <button class="lead-tile" data-lead="morgan" type="button" aria-controls="leadDetail">
+              <span class="lead-avatar">AM</span>
+              <span><b>Amanda Morgan</b><small>Question · Medium</small></span>
+              <em>Open</em>
+            </button>
+
+            <button class="lead-tile" data-lead="reyes" type="button" aria-controls="leadDetail">
+              <span class="lead-avatar">CR</span>
+              <span><b>Carlos Reyes</b><small>Not ready · Low</small></span>
+              <em>Open</em>
+            </button>
+
+            <div class="sidebar-note">Click a lead to update the operating view. Then click the detail panels to open the second layer.</div>
+          </aside>
+
+          <section class="laura-main-view" aria-live="polite">
+            <div class="view-header">
+              <div>
+                <span class="eyebrow">Selected Lead</span>
+                <h2 id="leadName">Jim Smith</h2>
+              </div>
+              <span id="priorityBadge" class="priority high">High Priority</span>
+            </div>
+
+            <div class="insight-grid">
+              <button class="insight-card click-layer" data-panel="reply" type="button">
+                <span>Latest Reply</span>
+                <p id="leadReply">Yes, we are thinking about selling in April.</p>
+                <small>Click for source detail</small>
+              </button>
+              <button class="insight-card click-layer" data-panel="ai" type="button">
+                <span>AI Summary</span>
+                <p id="aiSummary">The homeowner is planning to sell and has a clear near-term timeline.</p>
+                <small>Click for AI output</small>
+              </button>
+              <button class="insight-card click-layer" data-panel="action" type="button">
+                <span>Recommended Action</span>
+                <p id="recommendedAction">Schedule a market analysis appointment to assess their home’s value and discuss readiness.</p>
+                <small>Click for handoff preview</small>
+              </button>
+            </div>
+
+            <div class="laura-detail-row">
+              <button class="wide-detail click-layer" data-panel="record" type="button">
+                <span class="eyebrow">Workflow State</span>
+                <h3 id="workflowState">agent_notified</h3>
+                <p>The lead record has been updated, AI output has been written back, and the assigned agent has been notified.</p>
+              </button>
+              <button class="wide-detail click-layer" data-panel="reason" type="button">
+                <span class="eyebrow">Why Laura Recommends This</span>
+                <h3 id="reasonTitle">Clear seller signal</h3>
+                <p id="aiReason">They have a clear selling timeline and need a home-value conversation.</p>
+              </button>
+            </div>
+
+            <div class="second-layer" id="leadDetail">
+              <div class="second-layer-head">
+                <span class="eyebrow">Second Click Layer</span>
+                <h3 id="layerTitle">Source detail</h3>
+              </div>
+              <div id="layerContent" class="layer-content">
+                <p>The selected panel opens the next layer of detail here: source reply, AI fields, agent alert, workflow record, or rationale.</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="laura-proof-section" id="evidence">
+      <div class="container proof-grid">
+        <article class="proof-copy">
+          <span class="eyebrow">Proof Layer</span>
+          <h2>Real or semi-real workflow data at the front of the site.</h2>
+          <p>This viewer uses the actual Laura field structure and a real demo-style Google Sheet output: lead status, latest reply, AI priority, recommended action, reason, and generated timestamp.</p>
+          <div class="proof-points">
+            <div><b>Source of truth</b><span>Google Sheets / Sanctus DB</span></div>
+            <div><b>AI fields</b><span>Summary · Priority · Action · Reason</span></div>
+            <div><b>Handoff</b><span>Assigned-agent alert + visible status</span></div>
+          </div>
+        </article>
+        <button class="screenshot-card click-layer" data-panel="sheet" type="button" aria-label="Open Google Sheet evidence detail">
+          <img src="laura-google-sheet-ai-output.png" alt="Google Sheet showing Laura AI output with agent_notified status">
+          <span>Click the screenshot to load the database evidence layer.</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="laura-workflow-section" id="workflow">
+      <div class="container">
+        <div class="section-title light-title">
+          <div><h2>Operating Loop</h2><div class="rule"></div></div>
+          <p>The viewer is built around the completed Laura Core Demo path.</p>
+        </div>
+        <div class="modern-flow">
+          <button class="flow-node click-layer" data-panel="capture" type="button"><span>01</span><b>Capture</b><small>WhatsApp reply</small></button>
+          <button class="flow-node click-layer" data-panel="match" type="button"><span>02</span><b>Match</b><small>Lead row lookup</small></button>
+          <button class="flow-node click-layer" data-panel="interpret" type="button"><span>03</span><b>Interpret</b><small>AI summary + priority</small></button>
+          <button class="flow-node click-layer" data-panel="handoff" type="button"><span>04</span><b>Handoff</b><small>Agent alert</small></button>
+          <button class="flow-node click-layer" data-panel="visible" type="button"><span>05</span><b>Visible</b><small>Dashboard state</small></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="ov-section ov-close">
+      <div class="container">
+        <div class="contact-band dark-band"><div><h2>Laura proves the loop.</h2><p>Lead reply → AI understanding → database update → agent alert → dashboard visibility → no lead goes cold.</p></div><a class="btn btn-primary" href="index.html#work">Back to Studio Showcase</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container footer-inner"><div>AtlasFlow LLC · Laura Operational Viewer</div><div><a href="index.html">Home</a> · <a href="privacy.html">Privacy</a> · <a href="sms-consent.html">SMS Consent</a></div></div></footer>
+
+<script>
+const leadData = {
+  smith: {
+    name: "Jim Smith", initials: "JS", priority: "High Priority", badge: "priority high",
+    reply: "Yes, we are thinking about selling in April.",
+    summary: "The homeowner is planning to sell and has a clear near-term timeline.",
+    action: "Schedule a market analysis appointment to assess their home’s value and discuss readiness.",
+    reasonTitle: "Clear seller signal", reason: "They have a clear selling timeline and need a home-value conversation.",
+    agent: "Jeff Mathy", status: "agent_notified"
+  },
+  morgan: {
+    name: "Amanda Morgan", initials: "AM", priority: "Medium Priority", badge: "priority medium",
+    reply: "We may move later this year. Can you send what homes like ours are selling for?",
+    summary: "Lead is interested but still early; she wants pricing information before committing to a conversation.",
+    action: "Send a short market snapshot and ask whether she wants a 15-minute pricing review.",
+    reasonTitle: "Interest with uncertain timing", reason: "The reply shows curiosity and possible future intent, but the timeline is still vague.",
+    agent: "Jeff Mathy", status: "ai_processed"
+  },
+  reyes: {
+    name: "Carlos Reyes", initials: "CR", priority: "Low Priority", badge: "priority low",
+    reply: "Thanks, but we are probably not doing anything until next year.",
+    summary: "Lead is not ready now and has a delayed selling timeline.",
+    action: "Set a long-term nurture reminder and avoid urgent follow-up.",
+    reasonTitle: "Delayed timeline", reason: "The lead explicitly pushed activity into next year and does not show immediate selling intent.",
+    agent: "Jeff Mathy", status: "ai_processed"
+  }
+};
+let selected = leadData.smith;
+function setLead(key) {
+  selected = leadData[key];
+  document.querySelectorAll('.lead-tile').forEach(tile => tile.classList.toggle('active', tile.dataset.lead === key));
+  document.getElementById('leadName').textContent = selected.name;
+  const badge = document.getElementById('priorityBadge');
+  badge.textContent = selected.priority;
+  badge.className = selected.badge;
+  document.getElementById('leadReply').textContent = selected.reply;
+  document.getElementById('aiSummary').textContent = selected.summary;
+  document.getElementById('recommendedAction').textContent = selected.action;
+  document.getElementById('workflowState').textContent = selected.status;
+  document.getElementById('reasonTitle').textContent = selected.reasonTitle;
+  document.getElementById('aiReason').textContent = selected.reason;
+  showPanel('reply');
+}
+function showPanel(panel) {
+  const title = document.getElementById('layerTitle');
+  const content = document.getElementById('layerContent');
+  const templates = {
+    reply: ["Source reply", `<p><b>${selected.name}</b> replied:</p><blockquote>${selected.reply}</blockquote><p>This is the raw signal Laura captures before the agent has to manually interpret it.</p>`],
+    ai: ["AI output fields", `<dl><dt>AI Summary</dt><dd>${selected.summary}</dd><dt>AI Priority</dt><dd>${selected.priority.replace(' Priority','')}</dd><dt>AI Reason</dt><dd>${selected.reason}</dd></dl>`],
+    action: ["Agent handoff preview", `<div class="mini-alert"><b>New Laura reply from ${selected.name}</b><br>AI Priority: ${selected.priority.replace(' Priority','')}<br>Summary: ${selected.summary}<br><br><b>Recommended Action:</b> ${selected.action}<br><br>Please follow up now.</div>`],
+    record: ["Workflow record detail", `<dl><dt>Assigned Agent</dt><dd>${selected.agent}</dd><dt>Laura Status</dt><dd>${selected.status}</dd><dt>Latest Reply</dt><dd>${selected.reply}</dd><dt>Next Action</dt><dd>${selected.action}</dd></dl>`],
+    reason: ["Recommendation rationale", `<p>${selected.reason}</p><p>Laura does not replace the agent. It makes the handoff clearer and faster.</p>`],
+    sheet: ["Database evidence layer", `<p>The uploaded Google Sheet evidence shows the final <b>agent_notified</b> state with AI summary, priority, recommended action, reason, and timestamp fields written back to the row.</p><img class="layer-image" src="laura-google-sheet-ai-output.png" alt="Google Sheet evidence detail">`],
+    capture: ["Capture", `<p>Twilio WhatsApp receives the inbound lead reply and starts the workflow.</p>`],
+    match: ["Match", `<p>Make searches the Google Sheet using the WhatsApp lead identifier and finds the matching lead row.</p>`],
+    interpret: ["Interpret", `<p>OpenAI turns the raw reply into structured summary, priority, recommended action, and reason.</p>`],
+    handoff: ["Handoff", `<p>Laura sends one enriched alert to the assigned agent with the original reply and AI context.</p>`],
+    visible: ["Visible", `<p>The updated record appears in the operating view so status, next action, and rationale are visible.</p>`]
+  };
+  const [t, html] = templates[panel] || templates.reply;
+  title.textContent = t;
+  content.innerHTML = html;
+  document.querySelector('.second-layer')?.scrollIntoView({behavior: 'smooth', block: 'nearest'});
+}
+document.querySelectorAll('[data-lead]').forEach(btn => btn.addEventListener('click', () => setLead(btn.dataset.lead)));
+document.querySelectorAll('[data-panel]').forEach(btn => btn.addEventListener('click', () => showPanel(btn.dataset.panel)));
+showPanel('reply');
+</script>
+</body>
+</html>
