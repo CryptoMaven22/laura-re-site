@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laura RE — AtlasFlow</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f6f7f9;
+      color: #1f2933;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #0f2742;
+      color: white;
+      padding: 56px 24px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 42px;
+    }
+
+    header p {
+      font-size: 20px;
+      max-width: 760px;
+      margin: 16px auto 0;
+    }
+
+    main {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 36px 24px;
+    }
+
+    section {
+      background: white;
+      border-radius: 14px;
+      padding: 28px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #0f2742;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      border: 1px solid #d8dee6;
+      border-radius: 12px;
+      padding: 18px;
+      background: #fbfcfd;
+    }
+
+    .workflow {
+      font-weight: bold;
+      font-size: 18px;
+      color: #0f2742;
+    }
+
+    footer {
+      text-align: center;
+      padding: 32px;
+      color: #667085;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Laura RE</h1>
+    <p>An AtlasFlow real estate workflow that turns lead replies and capture notes into AI summaries, priorities, and recommended next actions.</p>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>What Laura Does</h2>
+      <p>
+        Laura helps real estate agents manage messy lead replies and quick capture notes.
+        Instead of leaving important context buried in texts, notes, or memory, Laura structures the information,
+        summarizes what matters, assigns priority, and recommends the next action.
+      </p>
+    </section>
+
+    <section>
+      <h2>Core Workflow</h2>
+      <p class="workflow">
+        WhatsApp reply or capture note → AI summary → priority → recommended action → agent review
+      </p>
+    </section>
+
+    <section>
+      <h2>Use Cases</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Lead Reply</h3>
+          <p>Captures a buyer or seller response and summarizes what the agent needs to know.</p>
+        </div>
+        <div class="card">
+          <h3>Agent Capture Note</h3>
+          <p>Turns quick unstructured notes into clean follow-up information and next steps.</p>
+        </div>
+        <div class="card">
+          <h3>Priority Routing</h3>
+          <p>Flags which leads or follow-ups need the most urgent attention.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Tools Used</h2>
+      <div class="grid">
+        <div class="card">Make</div>
+        <div class="card">Google Sheets</div>
+        <div class="card">AppSheet</div>
+        <div class="card">Twilio WhatsApp</div>
+        <div class="card">OpenAI</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Project Status</h2>
+      <p>
+        Laura Core and Capture workflows are complete as an AtlasFlow MVP proof.
+        This page serves as the public-facing demo and portfolio wrapper for the project.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    AtlasFlow — turning operational complexity into clear next actions.
+  </footer>
+
+</body>
+</html>
