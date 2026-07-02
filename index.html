@@ -1,146 +1,22 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AtlasFlow | Intelligent Operating Environments</title>
-  <meta name="description" content="AtlasFlow designs AI-assisted workflows, working prototypes, and decision-support systems that help teams see what changed, what is at risk, and what to do next.">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Laura Core Demo | AtlasFlow</title>
+<style>
+:root{--ink:#101218;--muted:#667085;--soft:#f7f5fb;--line:#e9e5f1;--card:#fff;--purple:#8f54f6;--purple2:#6e3dd9;--violet:#ede4ff;--green:#0f7b5d;--blue:#0f5f8b;--shadow:0 18px 54px rgba(28,25,48,.10);--radius:24px;--max:1180px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:linear-gradient(180deg,#fff 0%,#fbf9ff 42%,#f7f5fb 100%);line-height:1.45}a{text-decoration:none;color:inherit}img{max-width:100%;display:block}.wrap{width:min(calc(100% - 40px),var(--max));margin:0 auto}.top{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.topin{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}.home{display:flex;align-items:center}.home img{width:208px;height:auto;border-radius:10px}.nav{display:flex;align-items:center;gap:24px;color:var(--muted);font-size:14px}.nav a:hover{color:var(--purple2)}.hero{padding:54px 0 28px}.heroGrid{display:grid;grid-template-columns:1.02fr .98fr;gap:34px;align-items:center}.eyebrow{display:inline-flex;gap:8px;align-items:center;background:var(--violet);color:var(--purple2);border:1px solid rgba(143,84,246,.22);border-radius:999px;padding:8px 12px;font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;margin-bottom:18px}h1{font-size:clamp(42px,6vw,76px);line-height:.96;letter-spacing:-.055em;margin:0 0 18px}h2{font-size:clamp(28px,3.5vw,44px);line-height:1.04;letter-spacing:-.04em;margin:0 0 12px}h3{margin:0 0 8px}.lead{font-size:19px;color:var(--muted);max-width:64ch;margin:0 0 28px}.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:13px 18px;font-weight:700;border:1px solid transparent;cursor:pointer}.btn.primary{background:linear-gradient(135deg,var(--purple),var(--purple2));color:#fff;box-shadow:0 14px 24px rgba(143,84,246,.24)}.btn.secondary{background:#fff;border-color:var(--line);color:#2b2d36}.heroCard{border-radius:32px;overflow:hidden;background:#fff;box-shadow:var(--shadow);border:1px solid var(--line);position:relative}.heroCard img{width:100%;aspect-ratio:16/11;object-fit:cover}.overlay{position:absolute;left:18px;right:18px;bottom:18px;background:rgba(255,255,255,.90);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.6);border-radius:20px;padding:17px;box-shadow:0 12px 30px rgba(18,16,32,.12)}.overlay b{display:block}.overlay p{margin:4px 0 0;color:var(--muted);font-size:14px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}.stat,.card,.miniCard{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}.stat{padding:18px}.label{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:800;margin-bottom:7px}.value{font-size:18px;font-weight:800}.section{padding:34px 0}.intro{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:18px}.intro p{color:var(--muted);margin:0;max-width:700px}.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.step{padding:18px}.num{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--violet);color:var(--purple2);font-weight:900;margin-bottom:12px}.step p,.miniCard p,.card p{color:var(--muted);margin:0}.two{display:grid;grid-template-columns:.95fr 1.05fr;gap:22px}.card{overflow:hidden}.pad{padding:24px}.tabs{display:flex;gap:8px;padding:14px 14px 0;border-bottom:1px solid var(--line);flex-wrap:wrap}.tab{border:1px solid var(--line);background:#fff;color:var(--muted);border-radius:14px 14px 0 0;padding:10px 14px;font-weight:800;cursor:pointer}.tab.on{background:var(--violet);border-color:#dac9ff;color:var(--purple2)}.panel{display:none;padding:22px}.panel.on{display:block}.stack{display:grid;gap:12px}.miniCard{padding:16px}.miniCard b{display:block;margin-bottom:4px}.timeline{display:grid;gap:10px}.line{display:grid;grid-template-columns:50px 190px 1fr;gap:14px;align-items:start;padding:14px;border:1px solid var(--line);border-radius:16px;background:#fff}.badge{display:inline-flex;border-radius:999px;padding:6px 10px;font-weight:800;font-size:12px;background:var(--violet);color:var(--purple2)}.module{font-weight:800}.muted{color:var(--muted)}.demoShell{background:#17131f;color:#fff;border-radius:30px;padding:18px;box-shadow:0 22px 70px rgba(27,21,48,.26)}.demoTop{display:flex;gap:8px;margin-bottom:14px}.dot{width:10px;height:10px;border-radius:50%;background:#ff6868}.dot:nth-child(2){background:#ffbf4d}.dot:nth-child(3){background:#3bd671}.dash{display:grid;grid-template-columns:250px 1fr;gap:14px}.side{background:#211a2e;border-radius:18px;padding:16px}.side img{width:140px;margin-bottom:18px}.side a{display:block;color:#cfc5e7;padding:10px 12px;border-radius:12px}.side a.active{background:#332645;color:#fff}.screen{background:#fff;color:var(--ink);border-radius:18px;padding:18px}.record{border:1px solid var(--line);border-radius:16px;padding:15px;margin-top:12px}.recordTop{display:flex;justify-content:space-between;gap:12px;align-items:center}.priority{background:#fff0d6;color:#9a6700;border-radius:999px;padding:6px 10px;font-size:12px;font-weight:900}.recommend{background:#f5f0ff;border:1px solid #dfd0ff;border-radius:16px;padding:14px;margin-top:12px}.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.signal{padding:17px;border-radius:18px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow)}.signal .tag{display:inline-flex;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:900;margin-bottom:10px}.high{background:#ffe6ee;color:#bf2453}.medium{background:#fff4d9;color:#946500}.low{background:#eaf8ee;color:#197a3d}.review{background:#eef2ff;color:#3e4eba}.road{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.phase{padding:18px;border-top:5px solid var(--purple)}.phase.green{border-top-color:var(--green)}.phase.blue{border-top-color:var(--blue)}.phase.slate{border-top-color:#64748b}footer{margin-top:30px;border-top:1px solid var(--line);background:#fff}.foot{min-height:62px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:18px;color:var(--muted);font-size:14px}.right{text-align:right}@media(max-width:1000px){.heroGrid,.two{grid-template-columns:1fr}.flow,.grid4,.road{grid-template-columns:repeat(2,1fr)}.dash{grid-template-columns:1fr}.side{display:none}}@media(max-width:720px){.nav{display:none}.home img{width:156px}.stats,.flow,.grid4,.road{grid-template-columns:1fr}.line{grid-template-columns:1fr}.foot{grid-template-columns:1fr;text-align:center}.right{text-align:center}h1{font-size:42px}.hero{padding-top:30px}}
+</style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav">
-      <a class="brand" href="index.html" aria-label="AtlasFlow home">
-        <img src="atlasflow-logo-full.png" alt="AtlasFlow logo">
-      </a>
-      <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#studio">Atlas Studio</a>
-        <a href="#work">Work</a>
-        <a href="#outcomes">Why It Matters</a>
-        <a href="privacy.html">Privacy</a>
-        <a class="nav-cta" href="#contact">Start a conversation</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <div class="kicker">AtlasFlow Studio</div>
-          <h1>Intelligent operating environments for complex work.</h1>
-          <p>AtlasFlow designs AI-assisted workflows, working prototypes, and decision-support systems that help teams see what changed, what is at risk, and what to do next.</p>
-          <div class="cta-row">
-            <a class="btn btn-primary" href="#studio">Explore Atlas Studio</a>
-            <a class="btn btn-secondary" href="#work">View the Work</a>
-          </div>
-        </div>
-        <aside class="hero-card" aria-label="AtlasFlow showcase">
-          <img src="atlasflow-logo-full.png" alt="AtlasFlow logo">
-          <div class="label">Portfolio proof points</div>
-          <h2>Arc, Cal, and Laura show the method in motion.</h2>
-          <p>Each build turns messy operational work into a clearer review path, visible risk signals, and next actions.</p>
-        </aside>
-      </div>
-    </section>
-
-    <section class="section" id="does">
-      <div class="container">
-        <div class="section-title">
-          <div><h2>What AtlasFlow Does</h2><div class="rule"></div></div>
-          <p>AtlasFlow is not a generic automation agency. It is a working practice for making complex work visible, testable, and easier to improve.</p>
-        </div>
-        <div class="cards">
-          <article class="card"><h3>Clarify Operational Complexity</h3><p>Turn messy inputs, handoffs, exceptions, and decisions into structured workflows.</p></article>
-          <article class="card"><h3>Build AI-Assisted Workflows</h3><p>Use automation and AI to summarize, classify, prioritize, and recommend next actions.</p></article>
-          <article class="card"><h3>Create Operational Viewers</h3><p>Make the work visible through customer-facing views, prototypes, and dashboards.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section studio" id="studio">
-      <div class="container">
-        <div class="section-title">
-          <div><h2>Atlas Studio</h2><div class="rule"></div></div>
-          <p>The working practice inside AtlasFlow where messy operational ideas become visible, testable, AI-assisted workflows.</p>
-        </div>
-        <div class="steps">
-          <div class="step"><div class="step-number">1</div><h3>Discover the operational mess.</h3></div>
-          <div class="step"><div class="step-number">2</div><h3>Map the workflow.</h3></div>
-          <div class="step"><div class="step-number">3</div><h3>Build a lightweight model.</h3></div>
-          <div class="step"><div class="step-number">4</div><h3>Add AI and automation.</h3></div>
-          <div class="step"><div class="step-number">5</div><h3>Create the Operational Viewer.</h3></div>
-          <div class="step"><div class="step-number">6</div><h3>Use feedback to refine toward MVP or pilot.</h3></div>
-        </div>
-        <div class="studio-callout">Atlas Studio turns operational ideas into working prototypes before teams commit to a full build.</div>
-      </div>
-    </section>
-
-    <section class="section section-soft" id="work">
-      <div class="container">
-        <div class="section-title">
-          <div><h2>Studio Showcase</h2><div class="rule"></div></div>
-          <p>Arc, Cal, and Laura are studio work examples. They demonstrate how the AtlasFlow method applies to real operational problems.</p>
-        </div>
-        <div class="showcase-grid">
-          <a class="project-card project-link" href="laura.html" aria-label="Open Laura Operational Viewer">
-            <img class="project-logo" src="laura-logo-coral.png" alt="Laura, an AtlasFlow Platform logo">
-            <div class="project-top"><h3>Laura</h3><span class="status status-coral">MVP Proof Point</span></div>
-            <div class="project-body"><dl>
-              <div><dt>Operating Problem</dt><dd>Real estate lead and capture workflow.</dd></div>
-              <div><dt>What It Proves</dt><dd>Inbound message or note becomes an AI summary and agent-ready next action.</dd></div>
-              <div><dt>AI Role</dt><dd>Summarize lead context, identify priority, and recommend follow-up.</dd></div>
-            </dl></div>
-            <span class="open-ov">Open Laura OV →</span>
-          </a>
-          <a class="project-card project-link" href="cal.html" aria-label="Open Cal Operational Viewer">
-            <img class="project-logo" src="cal-logo-blue.png" alt="Cal, an AtlasFlow Platform logo">
-            <div class="project-top"><h3>Cal</h3><span class="status status-blue">Studio Build</span></div>
-            <div class="project-body"><dl>
-              <div><dt>Operating Problem</dt><dd>Local service operations triage.</dd></div>
-              <div><dt>What It Proves</dt><dd>Messy customer request in; priority, classification, and recommended action out.</dd></div>
-              <div><dt>AI Role</dt><dd>Classify the request, prioritize urgency, and make dispatcher review faster.</dd></div>
-            </dl></div>
-            <span class="open-ov">Open Cal OV →</span>
-          </a>
-          <a class="project-card project-link featured" href="arc.html" aria-label="Open Arc Operational Viewer">
-            <img class="project-logo" src="arc-logo-teal.png" alt="Arc, an AtlasFlow Platform logo">
-            <div class="project-top"><h3>Arc</h3><span class="status status-teal">Validated Prototype / Studio Build</span></div>
-            <div class="project-body"><dl>
-              <div><dt>Operating Problem</dt><dd>Clinical schedule-change review.</dd></div>
-              <div><dt>What It Proves</dt><dd>What changed, what is at risk, and what to do next.</dd></div>
-              <div><dt>AI Role</dt><dd>Summarize, flag readiness risk, and recommend a human-reviewed next action.</dd></div>
-            </dl></div>
-            <span class="open-ov">Open Arc OV →</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="outcomes">
-      <div class="container">
-        <div class="section-title">
-          <div><h2>Why It Matters</h2><div class="rule"></div></div>
-          <p>The work is not about software for its own sake. It is about reducing operational noise and making decision pressure visible.</p>
-        </div>
-        <div class="outcomes">
-          <div class="outcome"><strong>Faster review</strong><span>Less time spent reading, interpreting, and re-stating messy requests.</span></div>
-          <div class="outcome"><strong>Clearer decisions</strong><span>Operators see the situation, risk, and recommended next step in one place.</span></div>
-          <div class="outcome"><strong>Fewer missed risks</strong><span>Exceptions, handoffs, and readiness gaps become visible earlier.</span></div>
-          <div class="outcome"><strong>Better handoffs</strong><span>The next person sees context without chasing messages or tribal knowledge.</span></div>
-          <div class="outcome"><strong>Less operational noise</strong><span>Routine clutter becomes structured enough to review quickly.</span></div>
-          <div class="outcome"><strong>More visible work</strong><span>Prototype viewers make invisible workflow pressure easier to discuss and improve.</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="contact-band"><div><h2>Work With AtlasFlow</h2><p>Interested in turning an operational workflow into a testable AI-assisted prototype?</p></div><a class="btn btn-primary" href="mailto:hello@getatlasflow.io">Start a conversation</a></div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer"><div class="container footer-inner"><div>AtlasFlow LLC</div><div><a href="privacy.html">Privacy</a> · <a href="sms-consent.html">SMS Consent</a> · <a href="terms.html">Terms</a></div></div></footer>
-</body>
-</html>
+<header class="top"><div class="wrap topin"><a class="home" href="#home" aria-label="Laura home"><img src="assets/laura-logo.png" alt="Laura logo"></a><nav class="nav"><a href="#loop">Loop</a><a href="#architecture">Architecture</a><a href="#viewer">Viewer</a><a href="#assist">AI Assist</a><a href="#roadmap">Roadmap</a></nav></div></header>
+<main id="home">
+<section class="hero"><div class="wrap heroGrid"><div><span class="eyebrow">Laura Core Demo · AtlasFlow RE</span><h1>Never let a real estate lead go cold.</h1><p class="lead">A mock product site for Laura: an AI-assisted operating layer that captures inbound lead replies, understands intent and urgency, updates the record, alerts the assigned agent, and makes the next action visible.</p><div class="actions"><a class="btn primary" href="#viewer">View mock dashboard</a><a class="btn secondary" href="#architecture">See system approach</a></div><div class="stats"><div class="stat"><div class="label">Core proof</div><div class="value">Reply → AI → Alert</div></div><div class="stat"><div class="label">Demo stack</div><div class="value">Make + OpenAI</div></div><div class="stat"><div class="label">Operator view</div><div class="value">AppSheet visibility</div></div></div></div><div class="heroCard"><img src="assets/people-whiteboard.png" alt="People in a glass office looking at a whiteboard"><div class="overlay"><b>Designed around execution, not another inbox.</b><p>The hero image frames Laura as a workflow design and operating discipline tool, not just a messaging automation.</p></div></div></div></section>
+<section id="loop" class="section"><div class="wrap"><div class="intro"><div><h2>The operating loop</h2><p>The PRD defines the proof as a lead reply coming in, Laura understanding intent, urgency, and recommended next step, then updating the database, notifying the agent, and reflecting the next action in the dashboard.</p></div></div><div class="flow"><div class="card step"><div class="num">1</div><h3>Capture</h3><p>Lead replies by WhatsApp and the inbound signal is captured.</p></div><div class="card step"><div class="num">2</div><h3>Match</h3><p>Laura finds the correct row using the WhatsApp lead identifier.</p></div><div class="card step"><div class="num">3</div><h3>Understand</h3><p>OpenAI turns the reply into priority, summary, reason, and next action.</p></div><div class="card step"><div class="num">4</div><h3>Notify</h3><p>The assigned agent receives a concise enriched alert.</p></div><div class="card step"><div class="num">5</div><h3>Show</h3><p>The dashboard shows the record, status, AI output, and handoff.</p></div></div></div></section>
+<section id="architecture" class="section"><div class="wrap two"><div class="card"><div class="tabs"><button class="tab on" data-tab="stack">Stack</button><button class="tab" data-tab="flow">System flow</button><button class="tab" data-tab="future">Future path</button></div><div class="panel on" data-panel="stack"><div class="stack"><div class="miniCard"><b>Google Sheets / Sanctus DB</b><p>System of record for lead data, statuses, timestamps, replies, AI fields, next actions, and evidence.</p></div><div class="miniCard"><b>Make</b><p>Automation layer that receives Twilio messages, searches rows, updates rows, calls AI, and sends alerts.</p></div><div class="miniCard"><b>Twilio WhatsApp</b><p>Inbound lead reply channel and outbound assigned-agent alert channel.</p></div><div class="miniCard"><b>OpenAI</b><p>Analyzes replies, summarizes intent, identifies urgency, explains reasoning, and recommends next action.</p></div><div class="miniCard"><b>AppSheet</b><p>Operator-facing dashboard and lead detail view.</p></div></div></div><div class="panel" data-panel="flow"><div class="timeline"><div class="line"><span class="badge">01</span><span class="module">Twilio inbound</span><span class="muted">Receive WhatsApp reply and capture body and sender identifier.</span></div><div class="line"><span class="badge">02</span><span class="module">Search Rows</span><span class="muted">Find the matching lead row using whatsapp_lead_phone.</span></div><div class="line"><span class="badge">03</span><span class="module">Duplicate filter</span><span class="muted">Stop if the lead has already been handled or notified.</span></div><div class="line"><span class="badge">04</span><span class="module">OpenAI + Mapping</span><span class="muted">Analyze, parse JSON, map priority, summary, reason, and recommended action.</span></div><div class="line"><span class="badge">05</span><span class="module">Final update</span><span class="muted">Write AI fields, agent_notified_at, final status, and dashboard-ready next action.</span></div></div></div><div class="panel" data-panel="future"><div class="stack"><div class="miniCard"><b>Database</b><p>Move toward a dedicated database such as Supabase once workflow value is proven.</p></div><div class="miniCard"><b>Backend</b><p>Shift orchestration toward dedicated backend / service orchestration such as Inngest plus serverless functions.</p></div><div class="miniCard"><b>Front end</b><p>AppSheet can remain until a custom front end such as Next.js is justified.</p></div><div class="miniCard"><b>AI layer</b><p>Add validation, retries, audit logs, and stronger error handling.</p></div></div></div></div><div class="card pad"><h2>What Laura is proving</h2><p>Laura proves that execution should not depend on agent discipline. When a lead replies, Laura captures the signal, understands what matters, alerts the assigned agent, updates workflow state, and makes the handoff visible.</p><br><div class="miniCard"><b>Current decision lock</b><p>Demo channel is Twilio WhatsApp Sandbox. Production consumer SMS remains blocked until A2P approval, while the demo continues through sandbox/internal channels.</p></div><br><div class="miniCard"><b>Duplicate protection</b><p>Re-run protection prevents repeated agent alerts once laura_status equals agent_notified.</p></div></div></div></section>
+<section id="viewer" class="section"><div class="wrap"><div class="intro"><div><h2>Mock operator viewer</h2><p>Laura’s alert remains the execution interface, while the dashboard provides visibility into workflow state and AI interpretation.</p></div></div><div class="demoShell"><div class="demoTop"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div><div class="dash"><aside class="side"><img src="assets/laura-logo.png" alt="Laura logo"><a class="active" href="#viewer">Lead Dashboard</a><a href="#assist">AI Assist</a><a href="#roadmap">Roadmap</a></aside><section class="screen"><div class="label">Laura Lead Dashboard</div><h3>Mary Demo · Hot reply captured</h3><div class="record"><div class="recordTop"><div><b>Latest reply</b><p>“Yes, we’d like to see it this weekend. Can someone call us?”</p></div><span class="priority">High Priority</span></div><div class="recommend"><b>Recommended action</b><p>Call now, confirm showing availability, and move the lead to agent follow-up. Reason: the lead shows clear intent, defined timeline, and asks to talk.</p></div></div><div class="record"><b>Status trail</b><p class="muted">lead_replied → ai_processed → agent_notified</p></div></section></div></div></div></section>
+<section id="assist" class="section"><div class="wrap"><div class="intro"><div><h2>AI Assist rules</h2><p>AI Assist does not conduct autonomous conversations. It clarifies the handoff by turning raw reply text into structured business output.</p></div></div><div class="grid4"><div class="signal"><span class="tag high">High</span><h3>Clear intent</h3><p>Defined timeline, request to talk, showing/appointment request, or availability.</p></div><div class="signal"><span class="tag medium">Medium</span><h3>Interested but vague</h3><p>Asks a question, needs more info, or timing is uncertain.</p></div><div class="signal"><span class="tag low">Low</span><h3>Not ready</h3><p>Delayed timeline, weak buying/selling signal, or low urgency.</p></div><div class="signal"><span class="tag review">Needs Review</span><h3>Ambiguous</h3><p>Unclear, incomplete, emotional, or cannot be confidently categorized.</p></div></div></div></section>
+<section id="roadmap" class="section"><div class="wrap"><div class="intro"><div><h2>Roadmap context</h2><p>The roadmap frames Laura as the lead-conversion core before expanding into Laura Expanded, Carmen, Nancy, and a cross-platform operating layer.</p></div></div><div class="road"><div class="card phase"><h3>Phase 1 · Laura MVP</h3><p>Lead intake, first SMS follow-up, inbound reply capture, agent notification, and status tracking.</p></div><div class="card phase"><h3>Phase 2 · Laura Expanded</h3><p>Qualification workflow, conversation visibility, agent approval controls, dashboard, and stronger automation logic.</p></div><div class="card phase green"><h3>Phase 3 · Carmen</h3><p>Transaction execution, deadline tracking, coordination, issue/risk management, and closing completion tracking.</p></div><div class="card phase blue"><h3>Phase 4 · Nancy</h3><p>Post-close follow-up, review generation, referral prompting, and long-term nurture workflows.</p></div></div></div></section>
+</main><footer><div class="wrap foot"><div>Confidential</div><div>Page 1 of n</div><div class="right">Atlas Studios</div></div></footer>
+<script>document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.remove('on'));document.querySelectorAll('.panel').forEach(x=>x.classList.remove('on'));t.classList.add('on');document.querySelector('[data-panel="'+t.dataset.tab+'"]').classList.add('on')}));</script>
+</body></html>
